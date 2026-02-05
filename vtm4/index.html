@@ -1,3 +1,4 @@
+
 <!DOCTYPE html><html lang="pt-BR" dir="ltr"><head>
 <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
 <meta name="robots" content="index, follow">
@@ -100,6 +101,36 @@
   defer
 ></script>
 <!-- UTMIFY -->
+
+<style>
+/* Camufla nome do produto e preço da Mundpay */
+[data-mndpay-render] h1,
+[data-mndpay-render] h2,
+[data-mndpay-render] h3,
+[data-mndpay-render] p,
+[data-mndpay-render] span {
+  color: #ffffff !important; /* mesma cor do fundo */
+}
+</style>
+<style>
+.mundpay-wrapper {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* Cobre nome + preço */
+.mundpay-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95px; /* ajustável */
+  background: #ffffff;
+  z-index: 10;
+  pointer-events: none;
+}
+</style>
 
 </head>
 
@@ -229,8 +260,10 @@ text-align: center;
 Hoy es su día de suerte, ha sido seleccionada para la última etapa de nuestro cuestionario premiado. Tendrá la oportunidad de conseguir nuestro KIT supremo, que solo unos pocos logran obtener. Haga clic en el botón y nuestro asistente se pondrá en contacto con usted. Buena suerte. ⤵️
 </p>
 </div>
+
 <!-- BOTÕES MUNDPAY (CONFIRMAR / RECUSAR) -->
-<div class="mundpay-buttons">
+<div class="mundpay-wrapper">
+  <div class="mundpay-cover"></div>
   <div data-mndpay-render="019c2f26-de04-7004-8d6e-1c616a5985d1"></div>
 </div>
 </div>
