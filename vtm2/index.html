@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>up2</title>
@@ -9,6 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
+.mundpay-buttons {
+  margin: 32px auto;
+  display: flex;
+  justify-content: center;
+}
+
   body, html { margin: 0; padding: 0; overflow-x: hidden; }
   img { max-width: 100%; height: auto; }
 </style>
@@ -28,6 +35,7 @@
 </head>
 
 <body>
+
     <section class="alert-section">
         <p>⚠️ ATENCIÓN: NO HAGA CLIC EN EL BOTÓN ATRÁS ESTO CAUSARÁ ERRORES CON SU PEDIDO, CONTINÚE ABAJO ⤵️</p>
     </section>
@@ -50,76 +58,16 @@
         </div>
     </main>
 
-  <!-- Seção Hotmart -->
-        <div>
-            <div id="hotmart-container">
-                <div id="box_hotmart">
-                    <!-- HOTMART - Sales Funnel Widget -->
-                    <!--- sales funnel container ---> 
-                    <div id="hotmart-sales-funnel"></div> 
-                    <!--- script load and setup ---> 
-                    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script> 
-                    <script> 
-                        checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-                    </script> 
-                    <!-- HOTMART - Sales Funnel Widget -->
-                </div>
-                <div id="cover"></div>
-                <div id="cover2"></div>
-                <!-- Barra principal para esconder parte do conteúdo -->
-            </div>
-        
-            <style>
-                /* Container do widget Hotmart */
-                #hotmart-container {
-                    position: relative;
-                    width: 100%;
-                    max-width: 650px;
-                    height: 420px;
-                    margin: 0 auto;
-                }
-        
-                /* Estilo para o iframe do widget */
-                #box_hotmart {
-                    width: 100%;
-                    height: 100%;
-                }
-        
-                /* Cobre o conteúdo com uma camada branca */
-                #cover {
-                    position: absolute;
-                    top: 215px; /* Ajuste conforme necessário para a posição vertical da cobertura */
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 650px; /* Largura da barra principal */
-                    height: 100px; /* Altura da barra principal */
-                    background-color: #FFFFFF; /* Cor branca sólida */
-                    z-index: 3; /* Superior ao conteúdo do iframe */
-                }
+<!-- BOTÕES MUNDPAY (CONFIRMAR / RECUSAR) -->
+<div class="mundpay-buttons">
+  <div data-mndpay-render="019c2f26-de04-7004-8d6e-1c616a5985d1"></div>
+</div>
 
-                #cover2 {
-                    position: absolute;
-                    top: 0px; /* Ajuste conforme necessário para a posição vertical da cobertura */
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 650px; /* Largura da barra principal */
-                    height: 155px; /* Altura da barra principal */
-                    background-color: #FFFFFF; /* Cor branca sólida */
-                    z-index: 3; /* Superior ao conteúdo do iframe */
-                }
-        
-                /* Responsividade para ajustar o tamanho da cobertura no mobile */
-                @media (max-width: 768px) {
-                    #cover {
-                        width: 100%; /* Ajusta a largura da cobertura no mobile */
-                    }
-                }
-            </style>
-        </div>   
-         <section class="alert-section">
-        <p>Esta oportunidad desaparecerá en cuanto salgas de esta página.</p> 
-        No existe un “volver después”. Es ahora o nunca.
-    </section>
+<section class="alert-section">
+  <p>Esta oportunidad desaparecerá en cuanto salgas de esta página.</p> 
+  No existe un “volver después”. Es ahora o nunca.
+</section>
+
     <script src="script.js"></script>
     <script src="/js/hotmart.upsell_checkout.js"></script>
     <script src="/js/hotmart.upsell_checkout-1.js"></script>
