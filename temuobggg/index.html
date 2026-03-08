@@ -153,6 +153,157 @@
           <div class="col-lg-8 text-center">
                                     <h2>En las próximas semanas le enviaremos nuevas actualizaciones sobre el estado de su pedido por correo electrónico. </h2>
                                     <h2>Por favor, revisa tu correo electrónico y la carpeta de spam para verificar si hay nuevas actualizaciones.</h2>
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Suporte</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+}
+
+/* BOTÃO QUE ABRE O POPUP */
+.support-btn{
+padding:12px 25px;
+background:#ff5a00;
+color:#fff;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* FUNDO ESCURO */
+.modal{
+display:none;
+position:fixed;
+z-index:999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+align-items:center;
+justify-content:center;
+}
+
+/* CAIXA DO POPUP */
+.modal-content{
+background:#fff;
+width:420px;
+border-radius:12px;
+padding:25px;
+text-align:center;
+position:relative;
+}
+
+/* BOTÃO X */
+.close{
+position:absolute;
+top:15px;
+right:20px;
+font-size:20px;
+cursor:pointer;
+}
+
+/* CAIXA CINZA */
+.support-box{
+background:#f3f4f6;
+padding:20px;
+border-radius:10px;
+margin:20px 0;
+}
+
+.support-email{
+font-weight:bold;
+font-size:18px;
+margin-top:8px;
+}
+
+/* BOTÃO ENVIAR */
+.send-btn{
+width:100%;
+background:#ff4d00;
+color:#fff;
+border:none;
+padding:14px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+margin-bottom:10px;
+}
+
+/* BOTÃO FECHAR */
+.close-btn{
+width:100%;
+background:#f5f5f5;
+border:none;
+padding:14px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="support-btn" onclick="openSupport()">Suporte</button>
+
+<div id="supportModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeSupport()">×</span>
+
+<h2>Soporte al Cliente</h2>
+<p>¿Necesitas ayuda? Contáctanos por correo electrónico</p>
+
+<div class="support-box">
+
+<div style="font-size:35px;">✉️</div>
+
+<p>Correo de soporte:</p>
+
+<div class="support-email">
+apoyotm26@gmail.com
+</div>
+
+</div>
+
+<button class="send-btn" onclick="sendEmail()">
+Enviar correo
+</button>
+
+<button class="close-btn" onclick="closeSupport()">
+Cerrar
+</button>
+
+</div>
+</div>
+
+<script>
+
+function openSupport(){
+document.getElementById("supportModal").style.display="flex";
+}
+
+function closeSupport(){
+document.getElementById("supportModal").style.display="none";
+}
+
+function sendEmail(){
+window.location.href="mailto:apoyotm26@gmail.com";
+}
+
+</script>
+
+</body>
+</html>
 <div class="button-xMAyyl6399192">
 <style>
 a.button-xMAyyl6399192-element {
